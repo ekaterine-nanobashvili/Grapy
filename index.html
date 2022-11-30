@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="nav-cont">
+          <a class="logo" href="index.html"> <i class="fi fi-rs-grape"></i> GRAPY</a>
+          <nav class="nav">
+            <ul class="nav-ul">
+              <li>ABOUT US</li>
+              <li>OUR MISSION</li>
+              <li>SIGN UP</li>
+            </ul>
+          </nav>
+        </div>
+        <a class="login" href="login">LOGIN</a>
+      </div>
+      <div class="head-flex">
+        <div class="desc-wrapper">
+          <div class="blur"></div>
+          <div class="head-desc">
+            <h2 class="head-text">A Little Taste of Georgia, No Matter Where You Are</h2>
+            <h3 class="head-text">Sourced Locally, Delivered to You.</h3>
+            <p class="head-text">Indulge in Georgian tea, sweets & snacks with monthly box Grapy.
+                    Delivered worldwide.</p>
+            <div class="get-yours">
+              <button type="button" class="get-yours-btn">
+                  <a href="#">Get Your Own</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="slider-container">
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                  <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="img/box.jpg" alt="Georgian sweets box">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Emily-Lush-traditional-Georgian-desserts-Khalva.jpg" alt="Georgian snack khalva">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Emily-Lush-traditional-Georgian-desserts-dried-persimmons-Chiri.jpg" alt="Georgian dessert dried fruit chiri">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Emily-Lush-Christmas-in-Tbilisi-2021-Gozinaki-candy.jpg" alt="Georgian candy Gozinaki">
+                    </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="about-us">
+        <div class="bg-img-container">
+          <div class="bg-img">
+          </div>
+        </div>
+        <div class="outer">
+          <div class="inner">
+            <h3 class="about-us-text">WE ARE GRAPY</h3>
+            <h4 class="about-us-text">Your Monthly Georgian Snack Box Experience</h4>
+            <p class="about-us-text">We source and deliver Georgian tea, sweets and snacks from local makers for you to enjoy. Take a unique snack journey around Georgia with us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="mission-wrapper">
+        <div class="mission-img">
+        </div>
+        <div class="mission-shadowbox">
+          <div class="mission-textbox">
+            <h3 class="mission-text">We Strive to</h3>
+            <h4 class="mission-text">SUPPORT LOCAL BUSINESSES</h4>
+            <p class="mission-text">All Our Products are Sourced from Small Local Businesses. With Every Purchase You Help Strengthen Local Agriculture and Economy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="signup-section">
+      <div class="signup-wrapper">
+        <div class="signup-img">
+
+        </div>
+        <div class="form-container">
+          <div class="form-wrapper">
+            <!-- <h3 class="signup-title">Sign Up To Get Your First Box 50%-off:</h3> -->
+            <form action="" method="post" id="signup">
+              <label for="name">Input Your Name:</label>
+              <div class="field">
+                <input type="text" name="name" id="nameField" required />
+                <span class="error-text" id="error_name"></span>
+              </div>
+              <label for="email">Input Your Email Adress:</label>
+              <div class="field">
+                <input type="email" name="email" id="emailField" placeholder="example@email.com" required />
+                <span class="error-text" id="error_email"></span>
+              </div>
+              <label for="zipcode">Enter Your Zipcode:</label>
+              <div class="field">
+                <input type="text" name="zipcode" id="zipcodeField" required/>
+                <span class="error-text" id="error_zipcode"></span>
+              </div>
+              <label for="password">Enter Your Password:</label>
+              <div class="field">
+                <input
+                  type="password"
+                  name="password"
+                  id="passwordField"
+                  placeholder="Enter your password"
+                  required
+                />
+                <i id="toogleIcon" class="fa-solid fa-eye"></i>
+                <span class="error-text" id="error_password"></span>
+              </div>
+              <div class="field">
+                <input
+                  type="password"
+                  name="password2"
+                  id="passwordFieldrepeat"
+                  placeholder="Repeat Your password"
+                  required
+                />
+                <span class="error-text" id="error_password2"></span>
+              </div>
+              <!-- <div>
+                <label for="checkbox">Recieve Our Newsletter</label>
+                <input type="checkbox" name="checkbox" id="checkbox" />
+                <span class="error-text" id="error_check"></span>
+              </div> -->
+              <button class='submitbutton' type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-wrapper">
+          <div class="footer-content">
+              <div class="footer-main">
+                  <div class="grapy-footer">
+                      <h3><i class="fi fi-rs-grape"></i> GRAPY</h3>
+                      <p>Take a gastronomical cultural voyage around Georgia, during different seasons and holidays. Enjoy traditional and modern delicacies while contributing to the local economy.</p>
+                      <div class="socials">
+                          <a href="#">
+                              <div class="facebook">
+                                  <i class="fa-brands fa-facebook-f"></i>
+                              </div>
+                          </a>
+                          <a href="#">
+                              <div class="twitter">
+                                  <i class="fa-brands fa-twitter"></i>
+                              </div>
+                          </a>
+                          <a href="#">
+                              <div class="google">
+                                  <i class="fa-brands fa-google-plus-g"></i>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="useful-links-footer">
+                      <h3 class="head-footer">Useful links</h3>
+                      <ul class="links-footer">
+                          <a href="#">
+                              <li>Our Suppliers</li>
+                          </a>
+                          <a href="#">
+                              <li>Pricing</li>
+                          </a>
+                          <a href="#">
+                              <li>Box Preview</li>
+                          </a>
+                          <a href="#">
+                              <li>Testimonials</li>
+                          </a>
+                      </ul>
+                  </div>
+                  <div class="contact-footer">
+                      <h3 class="head-footer">Contact Info</h3>
+                      <ul class="footer-embed-ul">
+                          <li>
+                              <i class="fa-regular fa-envelope contact"></i>
+                              <a class="footer-embed" href="mailto:example@yahoo.com">example@yahoo.com</a>
+                          </li>
+                          <li>
+                              <i class="fa-solid fa-phone contact"></i>
+                              <a class="footer-embed" href="tel:+591 0 322 599 734561">+591 0 322 599 734561</a>
+                          </li>
+                          <li>
+                              <i class="fa-solid fa-location-dot contact"></i>
+                              <a class="footer-embed" href="https://goo.gl/maps/JXfpcxkECAhVt26E9" target="_blank">Agmashenebeli street, Tbilisi</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="footer-copy">
+                  <p>Copyright ©2020 All rights reserved | This template is made with love by <span class="author">Ekaterine</span></p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
