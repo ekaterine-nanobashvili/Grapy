@@ -175,7 +175,7 @@ body {
 }
 .bg-img {
     margin: auto;
-    background-image: url('https://bettyonthego.com/wp-content/uploads/2019/04/DSC03800.jpg');
+    background-image: url('../img/sec2.jpg');
     filter: blur(1px);
     overflow: hidden;
     width: 80%;
