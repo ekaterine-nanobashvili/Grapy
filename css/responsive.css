@@ -1,0 +1,62 @@
+@media (max-width: 1769px) {
+    .field input:focus {
+        width: 90%;
+    }
+}
+@media (max-width: 1299px) {
+    .head-text:nth-child(3) {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 1264px) {
+    .head-text:nth-child(3) {
+        margin-bottom: 30px;
+    }
+    .head-flex {
+        position: relative;
+        padding: 70px 0;
+    }
+    .desc-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+        z-index: 6;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+    .blur {
+        background-color: rgba(255, 255, 255, 0.445);
+    }
+    .head-desc {
+        background-color: rgba(255, 255, 255, 0.479);
+    }
+    .swiper {
+        border-radius: 4px;
+        max-width: 950px;
+    }
+}
+@media (max-width: 1183px) {
+    .form-container {
+        width: 50%;
+    }
+}
+@media (max-width: 1077px) {
+    .field 
+}
+@media (max-width: 1060px) {
+    .bg-img {
+        width: 90%;
+    }
+}
+@media (max-width: 1024px) {
+    .bg-img {
+        width: 95%;
+    }
+    .footer-main {
+        justify-content: space-around;
+    }
+    .footer-copy {
+        text-align: center;
+    }
+}
