@@ -124,6 +124,81 @@ body {
     margin: 3px 70px;
     vertical-align: middle;
 }
+.burger-wrap {
+    display: none;
+    margin: auto;
+    width: 26px;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+}
+.burger {
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.bar1 {
+    top: 0;
+}
+.bar2 {
+    top: 9px;
+}
+.bar3 {
+    top: 18px;
+}
+.active .bar1,
+.active .bar3 {
+    top: 9px;
+    background-color: #85504e;
+}
+.active .bar1{
+    transform: rotate(45deg);
+}
+.active .bar2 {
+    display: none;
+}
+.active .bar3{
+    transform: rotate(-45deg);
+}
+.active-content {
+    height: fit-content;
+    background-color: #c5a890;
+}
+.nav-ul-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.nav-ul-active li {
+    margin: 10px 0 10px 0;
+}
+.active-content .login {
+    display: block;
+    margin-right: 0;
+}
+.active .active-content {
+    margin-top: 50px;
+    height: fit-content;
+    background-color: #c5a890;
+    display: block;
+}
+.active .nav-ul-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    font-family:'arial', 'sans-serif';
+    font-size: 18px;
+}
+.active .nav-ul-active li {
+    margin: 10px 0 10px 0;
+}
 .login {
     margin-right: 25px;
     padding: 2px 14px;

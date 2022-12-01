@@ -7,3 +7,10 @@ const swiper = new Swiper('.swiper', {
       },
     
   });
+
+let burger = document.querySelector(".burger-wrap");
+let miniNav = document.querySelector(".active-content")
+    burger.addEventListener("click", function() {
+        burger.classList.toggle("active");
+        miniNav.classList.toggle("active");
+    });
