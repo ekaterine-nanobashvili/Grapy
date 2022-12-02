@@ -125,15 +125,15 @@
         <div class="form-container">
           <div class="form-wrapper">
             <!-- <h3 class="signup-title">Sign Up To Get Your First Box 50%-off:</h3> -->
-            <form action="" method="post" id="signup">
+            <form action="" method="POST" id="signup">
               <label for="name">Input Your Name:</label>
               <div class="field">
-                <input type="text" name="name" id="nameField" required />
+                <input type="text" name="name" id="nameField"  required/>
                 <span class="error-text" id="error_name"></span>
               </div>
               <label for="email">Input Your Email Adress:</label>
               <div class="field">
-                <input type="email" name="email" id="emailField" placeholder="example@email.com" required />
+                <input type="email" name="email" id="emailField" placeholder="example@email.com"  required/>
                 <span class="error-text" id="error_email"></span>
               </div>
               <label for="zipcode">Enter Your Zipcode:</label>
@@ -142,7 +142,7 @@
                 <span class="error-text" id="error_zipcode"></span>
               </div>
               <label for="password">Enter Your Password:</label>
-              <div class="field">
+              <div class="field" id="passwordEnter">
                 <input
                   type="password"
                   name="password"
@@ -150,7 +150,7 @@
                   placeholder="Enter your password"
                   required
                 />
-                <i id="toogleIcon" class="fa-solid fa-eye"></i>
+                <i id="toogleIcon" class="fa-solid fa-eye eye"></i>
                 <span class="error-text" id="error_password"></span>
               </div>
               <div class="field">

@@ -163,10 +163,6 @@ body {
 .active .bar3{
     transform: rotate(-45deg);
 }
-/* .active-content {
-    height: fit-content;
-    background-color: #c5a890;
-} */
 .nav-ul-active {
     display: flex;
     flex-direction: column;
@@ -205,6 +201,7 @@ body {
     height: fit-content;
     background-color: #c5a890;
     z-index: 40;
+    transition: all 0.08s linear; 
 }
 .login {
     margin-right: 25px;
@@ -457,6 +454,12 @@ input:focus {
     /* width: 45%; */
     background-color: rgb(254, 252, 240);
 }
+.error-text {
+    display: block;
+    color: #a76764;
+    margin-bottom: 12px;
+    transition: all 0.1s linear;
+}
 #signup {
     border: 1px solid #725f51;
     padding: 10px;
@@ -486,8 +489,12 @@ input:focus {
     padding: 5px 0;
     color: white;
 }
-.fa-solid {
+.eye {
     color:#85504e;
+    display: none;
+}
+.focused{
+    display: inline-block;
 }
 /* footer */
 .footer-wrapper {
