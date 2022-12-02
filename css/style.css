@@ -163,10 +163,10 @@ body {
 .active .bar3{
     transform: rotate(-45deg);
 }
-.active-content {
+/* .active-content {
     height: fit-content;
     background-color: #c5a890;
-}
+} */
 .nav-ul-active {
     display: flex;
     flex-direction: column;
@@ -198,6 +198,13 @@ body {
 }
 .active .nav-ul-active li {
     margin: 10px 0 10px 0;
+}
+.active-content.active {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    background-color: #c5a890;
+    z-index: 40;
 }
 .login {
     margin-right: 25px;
