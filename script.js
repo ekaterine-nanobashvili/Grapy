@@ -159,6 +159,8 @@ for (let i of login) {
             bg.appendChild(closeBtn);
             loginParent.appendChild(bg);
             loginParent.classList.add('login-block');
+            burger.classList.toggle("active");
+            miniNav.classList.toggle("active");
         }
     })
 }
@@ -168,5 +170,6 @@ for (let i of login) {
 loginParent.addEventListener('click', function(event){
     if (event.target.classList.contains('fa-xmark')) {
         loginParent.innerHTML = "";
+        loginParent.classList.remove('login-block');
     }
 })
