@@ -412,7 +412,7 @@ input:focus {
     border-bottom: 1px solid #725f51;
     transition: all 0.2s linear;
 }
-.label {
+.label, .label-user, .label-password {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
@@ -478,7 +478,7 @@ input:focus {
     left: 30%;
     transform: translate(-30%, -30%);
 }
-.submitbutton {
+.submitbutton, .login-button {
     width: 20%;
     border: none;
     background-color: #a76764;
@@ -612,4 +612,56 @@ input:focus {
 }
 .author {
     color: #a76764;
+}
+/* dynamic login */
+#loginParent {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7000;
+}
+.login-block {
+    display: block !important;
+}
+.login-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #7070709d;
+    position: absolute;
+}
+.login-wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: fit-content;
+    padding: 10px;
+    border: 1px solid #725f51;
+    background-color: rgb(254, 252, 240);
+}
+.login-form {
+    border: 1px solid #725f51;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.user-wrap, .password-wrap {
+    text-align: center;
+}
+.login-button {
+    align-self: center;
+    justify-self: center;
+}
+#x {
+    position: fixed;
+    font-size: 40px;
+    color: #85504e;
+    top: 3%;
+    right: 6%;
+    transform: translate(-6%, -3%);
+    /* filter: drop-shadow(0 0 0.45rem rgb(59, 59, 59)); */
 }

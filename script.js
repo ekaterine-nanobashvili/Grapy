@@ -55,9 +55,9 @@ form.addEventListener('submit', function(event) {
         form.submit();
     }
 })
-//toggle password
+//toggle form password
 let password = document.getElementById("passwordField");
-let icon = document.getElementById("toogleIcon");
+let icon = document.getElementById("toggleIcon");
 
 icon.addEventListener("click", function () {
   if (password.type == "password") {
@@ -96,3 +96,77 @@ passwordRepeat.addEventListener('focus', function(){
     icon.classList.remove('focused');
 })
 // ძალიან მინდოდა event delegation ით გაკეთება მაგრამ ვერ მოვახერხე
+
+// login API
+
+// create dynamic login form
+let login = document.getElementsByClassName('login');
+let loginParent = document.getElementById('loginParent');
+
+for (let i of login) {
+    i.addEventListener('click', (e) => {
+        if (e.target.classList.contains('login')) {
+            let bg = document.createElement('div');
+            bg.classList.add('login-bg');
+            let loginWrap = document.createElement('div');
+            loginWrap.classList.add('login-wrap');
+            let loginForm = document.createElement('form');
+            loginForm.classList.add('login-form');
+            loginForm.setAttribute('action', '');
+            loginForm.setAttribute('method', 'GET');
+            let userWrap = document.createElement('div');
+            userWrap.classList.add('user-wrap');
+            let labelUser = document.createElement('label');
+            labelUser.innerText= "USERNAME:";
+            labelUser.classList.add('label-user');
+            labelUser.setAttribute('for', 'userName')
+            let userField = document.createElement('input');
+            userField.classList.add('login-user');
+            userField.setAttribute('type', 'text');
+            userField.setAttribute('name', 'userName')
+            let passWrap = document.createElement('div');
+            passWrap.classList.add('password-wrap');
+            let labelPass = document.createElement('label');
+            labelPass.innerText = "PASSWORD:";
+            labelPass.classList.add('label-password');
+            labelPass.setAttribute('for', 'userPassword')
+            let loginPass = document.createElement('input');
+            loginPass.classList.add('login-password');
+            loginPass.setAttribute('type', 'password');
+            loginPass.setAttribute('name', 'userPassword');
+            let passIcon = document.createElement('i');
+            passIcon.classList.add('fa-solid');
+            passIcon.classList.add('fa-eye');
+            passIcon.classList.add('eye');
+            let loginBtn = document.createElement('button');
+            loginBtn.classList.add('login-button');
+            loginBtn.innerText = "LOG IN";
+            loginBtn.setAttribute('type', 'submit');
+            let closeBtn = document.createElement('i');
+            closeBtn.classList.add('fa-solid');
+            closeBtn.classList.add('fa-xmark');
+            closeBtn.setAttribute('id', 'x');
+            userWrap.appendChild(userField);
+            passWrap.appendChild(loginPass);
+            passWrap.appendChild(passIcon);
+            loginForm.appendChild(labelUser);
+            loginForm.appendChild(userWrap);
+            loginForm.appendChild(labelPass);
+            loginForm.appendChild(passWrap);
+            loginForm.appendChild(loginBtn);
+            loginWrap.appendChild(loginForm);
+            bg.appendChild(loginWrap);
+            bg.appendChild(closeBtn);
+            loginParent.appendChild(bg);
+            loginParent.classList.add('login-block');
+        }
+    })
+}
+
+// close the login form with button
+
+loginParent.addEventListener('click', function(event){
+    if (event.target.classList.contains('fa-xmark')) {
+        loginParent.innerHTML = "";
+    }
+})
