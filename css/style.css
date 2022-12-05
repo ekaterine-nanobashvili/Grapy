@@ -96,12 +96,13 @@ body {
     height: 44px;
     width: 190px;
     border: none;
+    cursor: pointer;
 }
 .get-yours-btn:hover {
     background-color: #85504e;
     transition: all 0.2s linear;
 }
-.get-yours a{
+.get-yours p{
     color: white;
 }
 .nav-wrapper {
@@ -655,6 +656,7 @@ input:focus {
 .login-button {
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
 #x {
     position: fixed;

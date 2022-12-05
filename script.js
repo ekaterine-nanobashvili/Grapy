@@ -182,8 +182,8 @@ for (let i of login) {
             bg.appendChild(closeBtn);
             loginParent.appendChild(bg);
             loginParent.classList.add('login-block');
-            burger.classList.toggle("active");
-            miniNav.classList.toggle("active");
+            burger.classList.remove("active");
+            miniNav.classList.remove("active");
             loginAPI();
         }
     })
@@ -211,8 +211,8 @@ loginParent.addEventListener('click', function (event){
                 console.log('success');
                 loginParent.innerHTML = "";
                 loginParent.classList.remove('login-block');
-                burger.classList.toggle("active");
-                miniNav.classList.toggle("active");
+                burger.classList.remove("active");
+                miniNav.classList.remove("active");
                 login1.innerText = "Hi, " + firstname;
                 login2.innerText = "Hi, " + firstname;
             }
@@ -226,3 +226,28 @@ loginParent.addEventListener('click', function (event){
         storage();
     }
 })
+
+// autoscroll
+let signupSection = document.getElementById('signupSection');
+
+// function scrollToBottom(timedelay=0) {
+//     var scrollId;
+//     var height = 0;
+//     var minScrollHeight = 100;
+//     scrollId = setInterval(function () {
+//         if (height <= document.body.scrollHeight) {
+//             window.scrollBy(0, minScrollHeight);
+//         }
+//         else {
+//             clearInterval(scrollId);
+//         }
+//         height += minScrollHeight;
+//     }, timedelay);           
+// }
+let scrollIntoViewOptions = {behavior: "smooth", block: "start", inline: "center"};
+
+let getYours = document.getElementById("getYours");
+
+getYours.addEventListener('click', function() {
+    signupSection.scrollIntoView(scrollIntoViewOptions) 
+});
