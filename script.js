@@ -98,10 +98,29 @@ passwordRepeat.addEventListener('focus', function(){
 // ძალიან მინდოდა event delegation ით გაკეთება მაგრამ ვერ მოვახერხე
 
 // login API
-
-// create dynamic login form
 let login = document.getElementsByClassName('login');
 let loginParent = document.getElementById('loginParent');
+let loginUser = "";
+let loginPassword = "";
+let storedUser = "";
+let storedPassword = "";
+
+function loginAPI () {
+    fetch ("https://randomuser.me/api/", {
+        method: "GET",
+    })
+    .then(function(textForm) {
+        return textForm.json();
+    })
+    .then(function(jsForm) {
+        console.log(JSON.stringify(jsForm.results[0].login.username));
+        console.log(JSON.stringify(jsForm.results[0].login.password));
+        storedUser = jsForm.results[0].login.username;
+        storedPassword = jsForm.results[0].login.password;
+    })
+}
+
+// create dynamic login form
 
 for (let i of login) {
     i.addEventListener('click', (e) => {
@@ -161,8 +180,10 @@ for (let i of login) {
             loginParent.classList.add('login-block');
             burger.classList.toggle("active");
             miniNav.classList.toggle("active");
+            loginAPI();
         }
     })
+
 }
 
 // close the login form with button
@@ -171,5 +192,31 @@ loginParent.addEventListener('click', function(event){
     if (event.target.classList.contains('fa-xmark')) {
         loginParent.innerHTML = "";
         loginParent.classList.remove('login-block');
+    }
+})
+
+loginParent.addEventListener('click', function (event){
+    if (event.target.classList.contains('login-button')) {
+        event.preventDefault();
+        function storage () {
+            let username = document.querySelector('.login-user').value;
+            let password = document.querySelector('.login-password').value;
+            loginUser = username;
+            loginPassword= password;
+            if (loginUser ==  storedUser && loginPassword == storedPassword) {
+                console.log('success');
+                loginParent.innerHTML = "";
+                loginParent.classList.remove('login-block');
+                burger.classList.toggle("active");
+                miniNav.classList.toggle("active");
+            }
+            // else if (loginUser.username !== stored.username || loginUser.password !== stored.password){
+            //     console.log('failure');
+            // }
+            else {
+                console.log('fail');
+            }
+        }
+        storage();
     }
 })
