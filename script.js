@@ -247,7 +247,41 @@ let signupSection = document.getElementById('signupSection');
 let scrollIntoViewOptions = {behavior: "smooth", block: "start", inline: "center"};
 
 let getYours = document.getElementById("getYours");
+let signup1 = document.getElementById('signup1');
+let signup2 = document.getElementById('signup2');
 
 getYours.addEventListener('click', function() {
     signupSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+signup1.addEventListener('click', function() {
+    signupSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+signup2.addEventListener('click', function() {
+    signupSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+let aboutUsSection = document.getElementById('aboutUsSection');
+let aboutUs1 = document.getElementById('aboutUs1');
+let aboutUs2 = document.getElementById('aboutUs2');
+
+aboutUs1.addEventListener('click', function() {
+    aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+aboutUs2.addEventListener('click', function() {
+    aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+let missionSection = document.getElementById('missionSection');
+let ourMission1 = document.getElementById('ourMission1');
+let ourMission2 = document.getElementById('ourMission2');
+
+ourMission1.addEventListener('click', function() {
+    missionSection.scrollIntoView(scrollIntoViewOptions) 
+});
+
+ourMission2.addEventListener('click', function() {
+    missionSection.scrollIntoView(scrollIntoViewOptions) 
 });

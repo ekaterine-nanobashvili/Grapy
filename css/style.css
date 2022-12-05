@@ -124,6 +124,11 @@ body {
 .nav-ul li {
     margin: 3px 70px;
     vertical-align: middle;
+    cursor: pointer;
+}
+.nav-ul li:hover {
+    color:  rgb(211, 211, 211);
+    transition: all 0.2s linear;
 }
 .burger-wrap {
     display: none;
@@ -173,6 +178,11 @@ body {
 }
 .nav-ul-active li {
     margin: 10px 0 10px 0;
+    cursor: pointer;
+}
+.nav-ul-active li:hover {
+    color:  rgb(211, 211, 211);
+    transition: all 0.2s linear;
 }
 .active-content .login {
     display: block;
@@ -489,6 +499,7 @@ input:focus {
     letter-spacing: 0px;
     padding: 5px 0;
     color: white;
+    cursor: pointer;
 }
 .eye {
     color:#85504e;
