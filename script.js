@@ -104,6 +104,9 @@ let loginUser = "";
 let loginPassword = "";
 let storedUser = "";
 let storedPassword = "";
+let firstname = "";
+let login1= document.getElementById('login1');
+let login2= document.getElementById('login2');
 
 function loginAPI () {
     fetch ("https://randomuser.me/api/", {
@@ -117,6 +120,7 @@ function loginAPI () {
         console.log(JSON.stringify(jsForm.results[0].login.password));
         storedUser = jsForm.results[0].login.username;
         storedPassword = jsForm.results[0].login.password;
+        firstname = jsForm.results[0].name.first;
     })
 }
 
@@ -209,6 +213,8 @@ loginParent.addEventListener('click', function (event){
                 loginParent.classList.remove('login-block');
                 burger.classList.toggle("active");
                 miniNav.classList.toggle("active");
+                login1.innerText = "Hi, " + firstname;
+                login2.innerText = "Hi, " + firstname;
             }
             // else if (loginUser.username !== stored.username || loginUser.password !== stored.password){
             //     console.log('failure');
