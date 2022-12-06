@@ -506,9 +506,16 @@ input:focus {
 .eye {
     color:#85504e;
     display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(-50%);
 }
 .focused{
     display: inline-block;
+}
+#passwordEnter {
+    position: relative;
 }
 /* footer */
 .footer-wrapper {
@@ -704,4 +711,7 @@ input:focus {
 .js-scroll.scrolled {
     opacity: 1;
     animation: fade-in-bottom 1s ease-in-out both;
+}
+.form-wrapper.js-scroll.scrolled {
+    animation: fade-in-bottom 1s ease-in-out;
 }
