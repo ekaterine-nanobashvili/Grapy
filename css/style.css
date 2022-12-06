@@ -259,8 +259,10 @@ body {
     /* background-color: #e7d9ce; */
     /* overflow: hidden;
 } */ 
-.about-us {
+#aboutUsSection {
     background-color: rgb(254, 252, 240);
+}
+.about-us {
     position: relative;
 }
 .bg-img {
@@ -681,4 +683,25 @@ input:focus {
     border: #534741 solid 1px;
     padding: 0 10px;
     background-color: rgb(214, 212, 202);
+}
+/* on scroll animations */
+.js-scroll {
+    opacity: 0;
+    /* visibility: hidden; */
+    /* transition:800ms cubic-bezier(.23,1,.32,1); */
+} 
+
+@keyframes fade-in-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.js-scroll.scrolled {
+    opacity: 1;
+    animation: fade-in-bottom 1s ease-in-out both;
 }
