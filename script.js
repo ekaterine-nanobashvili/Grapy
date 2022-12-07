@@ -230,20 +230,6 @@ loginParent.addEventListener('click', function (event){
 // autoscroll
 let signupSection = document.getElementById('signupSection');
 
-// function scrollToBottom(timedelay=0) {
-//     var scrollId;
-//     var height = 0;
-//     var minScrollHeight = 100;
-//     scrollId = setInterval(function () {
-//         if (height <= document.body.scrollHeight) {
-//             window.scrollBy(0, minScrollHeight);
-//         }
-//         else {
-//             clearInterval(scrollId);
-//         }
-//         height += minScrollHeight;
-//     }, timedelay);           
-// }
 let scrollIntoViewOptions = {behavior: "smooth", block: "start", inline: "center"};
 
 let getYours = document.getElementById("getYours");
@@ -287,38 +273,7 @@ ourMission2.addEventListener('click', function() {
 });
 
 // JS on scroll animations
-// const scrollOffset = 100;
- 
-// const scrollElement = document.querySelector(".js-scroll");
- 
-// const elementInView = (el, offset = 0) => {
-//   const elementTop = el.getBoundingClientRect().top;
- 
-//   return (
-//     elementTop <= 
-//     ((window.innerHeight || document.documentElement.clientHeight) - offset)
-//   );
-// };
- 
-// const displayScrollElement = () => {
-//   scrollElement.classList.add('scrolled');
-// }
- 
-// const hideScrollElement = () => {
-//   scrollElement.classList.remove('scrolled');
-// }
- 
-// const handleScrollAnimation = () => {
-//   if (elementInView(scrollElement, scrollOffset)) {
-//       displayScrollElement();
-//   } else {
-//     hideScrollElement();
-//   }
-// }
- 
-// window.addEventListener('scroll', () => {
-//   handleScrollAnimation();
-// })
+
 const scrollElements = document.querySelectorAll(".js-scroll");
 
 const elementInView = (el, dividend = 1) => {

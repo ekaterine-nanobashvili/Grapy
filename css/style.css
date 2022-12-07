@@ -509,7 +509,7 @@ input:focus {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
 }
 .focused{
     display: inline-block;
