@@ -566,14 +566,16 @@ input:focus {
     margin-bottom: 10px;
 }
 .links-footer li {
-    font-size: 14px;
-    font-family: 'Libre Baskerville', sans-serif;
-    color: #a76764;
-    line-height: 19px;
     margin-top: 11px;
 }
 .footer-embed-ul {
     margin-top: 11px;
+}
+.links-footer a {
+    font-size: 14px;
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #a76764;
+    line-height: 19px;
 }
 .footer-embed-ul li:nth-child(2) {
     margin: 21px 0 21px 0;

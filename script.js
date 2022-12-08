@@ -135,7 +135,7 @@ for (let i of login) {
             loginWrap.classList.add('login-wrap');
             let loginForm = document.createElement('form');
             loginForm.classList.add('login-form');
-            loginForm.setAttribute('action', '');
+            loginForm.setAttribute('action', ' ');
             loginForm.setAttribute('method', 'GET');
             let userWrap = document.createElement('div');
             userWrap.classList.add('user-wrap');
