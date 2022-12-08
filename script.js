@@ -216,9 +216,6 @@ loginParent.addEventListener('click', function (event){
                 login1.innerText = "Hi, " + firstname;
                 login2.innerText = "Hi, " + firstname;
             }
-            // else if (loginUser.username !== stored.username || loginUser.password !== stored.password){
-            //     console.log('failure');
-            // }
             else {
                 console.log('fail');
             }
