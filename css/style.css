@@ -12,6 +12,11 @@ body {
   }
 .slider-container {
     padding: 25px 0px;
+    display: flex;
+}
+.swiper-wrapper {
+    margin-left: auto;
+    margin-right: auto;
 }
 .swiper-slide img {
     width: 100%;
@@ -147,10 +152,11 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
 }
-.nav-ul li {
+.nav-ul li a{
     margin: 3px 70px;
     vertical-align: middle;
     cursor: pointer;
+    color: white;
 }
 .nav-ul li:hover {
     color:  rgb(211, 211, 211);
@@ -219,9 +225,10 @@ body {
             align-items: center;
     display: none;
 }
-.nav-ul-active li {
+.nav-ul-active li a{
     margin: 10px 0 10px 0;
     cursor: pointer;
+    color: white;
 }
 .nav-ul-active li:hover {
     color:  rgb(211, 211, 211);

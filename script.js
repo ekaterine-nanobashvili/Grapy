@@ -1,3 +1,4 @@
+'use strict';
 const swiper = new Swiper('.swiper', {
     direction: 'horizontal',
     loop: true,
@@ -238,10 +239,12 @@ getYours.addEventListener('click', function() {
 });
 
 signup1.addEventListener('click', function() {
+    signup1.removeAttribute("href");
     signupSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
 signup2.addEventListener('click', function() {
+    signup2.removeAttribute("href");
     signupSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
@@ -250,10 +253,12 @@ let aboutUs1 = document.getElementById('aboutUs1');
 let aboutUs2 = document.getElementById('aboutUs2');
 
 aboutUs1.addEventListener('click', function() {
+    aboutUs1.removeAttribute("href");
     aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
 aboutUs2.addEventListener('click', function() {
+    aboutUs2.removeAttribute("href");
     aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
@@ -262,10 +267,12 @@ let ourMission1 = document.getElementById('ourMission1');
 let ourMission2 = document.getElementById('ourMission2');
 
 ourMission1.addEventListener('click', function() {
+    ourMission1.removeAttribute("href");
     missionSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
 ourMission2.addEventListener('click', function() {
+    ourMission2.removeAttribute("href");
     missionSection.scrollIntoView(scrollIntoViewOptions) 
 });
 
