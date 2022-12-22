@@ -225,57 +225,6 @@ loginParent.addEventListener('click', function (event){
     }
 })
 
-// autoscroll
-let signupSection = document.getElementById('signupSection');
-
-let scrollIntoViewOptions = {behavior: "smooth", block: "start", inline: "center"};
-
-let getYours = document.getElementById("getYours");
-let signup1 = document.getElementById('signup1');
-let signup2 = document.getElementById('signup2');
-
-getYours.addEventListener('click', function() {
-    signupSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-signup1.addEventListener('click', function() {
-    signup1.removeAttribute("href");
-    signupSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-signup2.addEventListener('click', function() {
-    signup2.removeAttribute("href");
-    signupSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-let aboutUsSection = document.getElementById('aboutUsSection');
-let aboutUs1 = document.getElementById('aboutUs1');
-let aboutUs2 = document.getElementById('aboutUs2');
-
-aboutUs1.addEventListener('click', function() {
-    aboutUs1.removeAttribute("href");
-    aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-aboutUs2.addEventListener('click', function() {
-    aboutUs2.removeAttribute("href");
-    aboutUsSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-let missionSection = document.getElementById('missionSection');
-let ourMission1 = document.getElementById('ourMission1');
-let ourMission2 = document.getElementById('ourMission2');
-
-ourMission1.addEventListener('click', function() {
-    ourMission1.removeAttribute("href");
-    missionSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
-ourMission2.addEventListener('click', function() {
-    ourMission2.removeAttribute("href");
-    missionSection.scrollIntoView(scrollIntoViewOptions) 
-});
-
 // JS on scroll animations
 
 const scrollElements = document.querySelectorAll(".js-scroll");
